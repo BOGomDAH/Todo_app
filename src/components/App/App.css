@@ -1,0 +1,92 @@
+.App {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    margin: 100px 0;
+}
+
+.background {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-image: url("../../assets/bg__light.jpg");
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.dark .background {
+    background-image: url("../../assets/bg__dark.jpg");
+}
+
+.todo {
+    width: 540px;
+    margin: 0 auto 50px;
+}
+.todo-bottom {
+    padding: 16px 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 35px 50px -15px rgb(194 195 214 / 50%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-bottom span, .todo-bottom > button {
+    width: 30%;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.194444px;
+    color: #9495A5;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.todo-bottom button {
+    font-family: 'Josefin Sans', sans-serif;
+    background: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.todo-bottom > button {
+    text-align: right;
+}
+
+.dark .todo-bottom{
+    background: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+footer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.194444px;
+    color: #9495A5;
+}
+
+@media (max-width: 767px) {
+    .todo {
+        width: calc(100% - 20px);
+        padding: 0 10px;
+    }
+    .todo-bottom {
+        padding: 16px;
+        flex-wrap: wrap;
+    }
+    .todo-bottom > span {
+        order: 2;
+    }
+    .todo-bottom > button {
+        order: 3;
+        width: auto
+    }
+}

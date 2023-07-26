@@ -1,0 +1,39 @@
+.todo__filter button+button {
+    margin-left: 18px;
+}
+
+.todo__filter button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.194444px;
+    color: #9495A5;
+}
+
+.todo__filter button.active {
+    color: #3A7CFD;
+}
+
+@media (max-width: 767px) {
+    .todo__filter {
+        margin-bottom: 15px;
+        order: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .todo__filter button {
+        width: 33%;
+        text-align: center;
+    }
+    .todo__filter button:first-child {
+        text-align: left;
+    }
+    .todo__filter button:last-child {
+        text-align: right;
+    }
+    .todo__filter button + button {
+        margin-left: 0;
+    }
+}
